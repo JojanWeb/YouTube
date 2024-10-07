@@ -92,6 +92,7 @@ hr{
   justify-content: space-between;
   padding-left: 16px;
   padding-right: 16px;
+  gap: 6px;
 }
 
 .logo__container{
@@ -264,6 +265,10 @@ hr{
   overflow-y: auto;
 }
 
+.video-container::-webkit-scrollbar-thumb{
+  background-color: #717171;
+}
+
 .video-content img{
   position: relative;
   /* width: cover; */
@@ -328,4 +333,28 @@ hr{
   font-size: 0.8rem;
   margin-top: 4px;
   color: #aaa;
+}
+
+@media (max-width: 1200px){
+  body{
+    grid-template-columns: 70px 1fr;
+  }
+
+  .sidebar-items span, .sidebar-items h4{
+    display: none;
+  }
+
+  .sidebar-items{
+    padding: 0;
+  }
+
+  .chips-warpper{
+    max-width: calc(100vw - 70px);
+  }
+}
+
+@media (max-width: 800px){
+  .search-container{
+    display: none;
+  }
 }
